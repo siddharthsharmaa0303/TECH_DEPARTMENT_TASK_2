@@ -1,0 +1,104 @@
+/* Intermediate CSS: Variables, Transitions, and Hover Effects */
+:root {
+    --primary-color: #8A2BE2; /* Purple */
+    --secondary-color: #20c997; /* Green */
+    --text-color: #212529;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+/* Custom Typography & Branding */
+.custom-heading {
+    color: var(--primary-color);
+}
+
+.custom-logo {
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.custom-logo span {
+    color: var(--secondary-color);
+}
+
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+/* Custom Buttons */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease-in-out;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-custom:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section Background */
+.hero-section {
+    min-height: 90vh;
+    background: linear-gradient(135deg, rgba(138,43,226,0.05) 0%, rgba(32,201,151,0.05) 100%);
+}
+
+/* Skill & Project Card Hover Animations (Intermediate CSS) */
+.skill-card, .project-card {
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    cursor: default;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important; /* Enhances the shadow */
+}
+
+/* Project Image Placeholders */
+.project-img-placeholder {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: var(--bs-border-radius);
+    border-top-right-radius: var(--bs-border-radius);
+}
+
+.custom-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+.custom-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Form Styling */
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25);
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Ensures the image crops nicely without stretching */
+    border: 5px solid #ffffff; /* Adds a clean white border */
+    transition: transform var(--transition-speed) ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
