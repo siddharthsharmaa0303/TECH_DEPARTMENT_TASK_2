@@ -1,60 +1,48 @@
-/* Intermediate CSS: Variables, Transitions, and Hover Effects */
-:root {
-    --primary-color: #8A2BE2; /* Purple */
-    --secondary-color: #20c997; /* Green */
-    --text-color: #212529;
-    --transition-speed: 0.3s;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
+    color: #212529;
 }
 
-/* Custom Typography & Branding */
 .custom-heading {
-    color: var(--primary-color);
+    color: #8A2BE2;
 }
 
 .custom-logo {
     font-size: 1.5rem;
-    color: var(--primary-color) !important;
+    color: #8A2BE2 !important;
 }
 
 .custom-logo span {
-    color: var(--secondary-color);
+    color: #20c997;
 }
 
 .tracking-wide {
     letter-spacing: 2px;
 }
 
-/* Custom Buttons */
 .btn-custom {
-    background-color: var(--primary-color);
+    background-color: #8A2BE2;
     color: white;
     border-radius: 30px;
     padding: 10px 30px;
     font-weight: 500;
-    transition: all var(--transition-speed) ease-in-out;
-    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #8A2BE2;
 }
 
 .btn-custom:hover {
     background-color: transparent;
-    color: var(--primary-color);
+    color: #8A2BE2;
     transform: translateY(-2px);
 }
 
-/* Hero Section Background */
 .hero-section {
     min-height: 90vh;
     background: linear-gradient(135deg, rgba(138,43,226,0.05) 0%, rgba(32,201,151,0.05) 100%);
 }
 
-/* Skill & Project Card Hover Animations (Intermediate CSS) */
 .skill-card, .project-card {
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
 
@@ -63,42 +51,38 @@ body {
 }
 
 .skill-card:hover, .project-card:hover {
-    transform: translateY(-10px); /* Lifts the card up */
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important; /* Enhances the shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
 }
 
-/* Project Image Placeholders */
 .project-img-placeholder {
     height: 200px;
     width: 100%;
-    border-top-left-radius: var(--bs-border-radius);
-    border-top-right-radius: var(--bs-border-radius);
+    border-radius: 6px 6px 0 0;
 }
 
 .custom-link {
-    color: var(--primary-color);
+    color: #8A2BE2;
     font-weight: 600;
-    transition: color var(--transition-speed);
+    transition: color 0.3s;
 }
 
 .custom-link:hover {
-    color: var(--secondary-color);
+    color: #20c997;
 }
 
-/* Form Styling */
 .form-control:focus {
-    border-color: var(--secondary-color);
+    border-color: #20c997;
     box-shadow: 0 0 0 0.25rem rgba(32, 201, 151, 0.25);
 }
 
-/* Profile Photo Styling */
 .profile-photo {
-    border-radius: 50%; /* Makes the image a perfect circle */
-    object-fit: cover; /* Ensures the image crops nicely without stretching */
-    border: 5px solid #ffffff; /* Adds a clean white border */
-    transition: transform var(--transition-speed) ease;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    transition: transform 0.3s ease;
 }
 
 .profile-photo:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
